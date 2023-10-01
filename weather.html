@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+San
+    s:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>WEATHER APP</h1>
+    <div class="tab-container">
+        <p class="tab current-tab" your-data>Your Weather</p>
+        <p class="tab" search-data>Search Weather</p>
+    </div>
+    <div class="weather-container">
+        <!--grant location-->
+        <div class="  sub-container location-container active ">
+            <img src="./assets/location.png" width="80" height="80"/>
+            <p>Grant Location Access</p>
+            <p>Allow Access to get weather Information</p>
+            <button class="btn" data-grantAccess>GRANT ACCESS</button>
+        </div>
+        <!--search weather-->
+        <form class="form-container " data-searchFom>
+            <input placeholder="Search For City..." data-seachInput>
+        <button class="btn">
+            <img src="./assets/search.png"  width="20" height="20">
+        </button>
+        </form>
+        <!--loading screen container-->
+        <div class="  sub-container loading-container ">
+            <img src="./assets/loading.gif"  width="150" height="150">
+            <p>Loading</p>
+        </div>
+        <!--your weather-->
+        <div class=" sub-container your-weather ">
+            <!--city name and flag-->
+            <div class="name">
+                <p city-name></p>
+                <img cityIcon>
+            </div>
+            <!--weather description-->
+            <p city-desc></p>
+            <!--weather icon-->
+            <img weatherIcon>
+            <!--weater temp-->
+            <p data-temp></p>
+            <!--3 cards-->
+            <div class="parameter-container">
+                <!--card 1-->
+                <div class="parameter">
+                    <img src="./assets/wind.png">
+                    <p>WINDSPEED</p>
+                    <p data-windspeed></p>
+                </div>
+                <!--card 2-->
+                <div class="parameter">
+                    <img src="./assets/humidity.png">
+                    <p>HUMIDITY</p>
+                    <p data-humidity></p>
+                </div>
+                <!--card 3-->
+                <div class="parameter">
+                    <img src="./assets/cloud.png">
+                    <p>CLOUDS</p>
+                    <p data-clouds></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="weather.js"></script>
+</body>
+</html>
